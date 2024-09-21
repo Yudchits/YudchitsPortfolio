@@ -1,11 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+:root {
+    --clr-dark: #f1f5f9;
+    --clr-light: #110f1b;
+}
+
+.light-mode {
+    --clr-dark: #000000;
+    --clr-light: #f1f5f9;
+}
+
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12pt;
+}
+
+html,
+body {
+    height: 100%;
 }
 
 a, 
@@ -91,14 +108,4 @@ button::-moz-focus-inner {
 
 label {
 	cursor: pointer;
-}
-
-.light-mode {
-    --clr-dark: #110f1b;
-    --clr-light: #f1f5f9;
-}
-
-.dark-mode {
-    --clr-dark: #f1f5f9;
-    --clr-light: #110f1b;
 }
