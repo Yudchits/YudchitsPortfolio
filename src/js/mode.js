@@ -1,8 +1,8 @@
-import CookieService from "./services/cookie.service.js";
+import ModeService from "./services/mode.service.js";
 
 let instance;
 
-const cookieService = new CookieService();
+const modeService = new ModeService();
 
 class Mode {
     constructor() {
@@ -22,7 +22,7 @@ class Mode {
 
     onModeBtnClick(event) {
         const mode = event.target.getAttribute('data-mode');
-        cookieService.setCookie('mode', mode);
+        modeService.populateMode(mode);
         window.location.href = 'index.html';
     }
 }

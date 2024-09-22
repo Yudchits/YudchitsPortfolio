@@ -1,15 +1,7 @@
-import CookieService from "./services/cookie.service.js";
+import ModeService from "./services/mode.service.js";
 
 let instance;
-const cookieService = new CookieService();
-const setMode = (mode) => {
-    const wrapper = document.querySelector('.wrapper');
-    wrapper.classList.forEach(className => {
-        wrapper.classList.remove(className);
-    })
-    wrapper.classList.add('wrapper');
-    wrapper.classList.add(mode);
-};
+const modeService = new ModeService();
 
 class Index {
     constructor() {
@@ -23,17 +15,7 @@ class Index {
     }
 
     onInit() {
-        this.initMode();
-    }
-
-    initMode() {
-        const mode = cookieService.getCookie('mode');
-        if (!mode) {
-            window.location.href = 'mode.html';
-        }
-        else {
-            setMode(mode);
-        }
+        modeService.initMode();
     }
 }
 
