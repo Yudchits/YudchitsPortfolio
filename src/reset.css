@@ -6,8 +6,13 @@
 }
 
 .light-mode {
-    --clr-dark: #000000;
+    --clr-dark: #110f1b;
     --clr-light: #f1f5f9;
+}
+
+.dark-mode {
+    --clr-dark: #f1f5f9;
+    --clr-light: #110f1b;
 }
 
 *,
@@ -30,6 +35,7 @@ a:link,
 a:visited,
 a:hover  {
     text-decoration: none;
+    color: var(--clr-dark);
 }
 
 header, 
