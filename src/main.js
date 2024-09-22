@@ -1,10 +1,10 @@
-import Index from "./index.js";
-import Mode from "./mode.js";
+import HomeComponent from "./components/home/home.js";
+import ModeComponent from "./components/mode/mode.js";
 
 function getCurrentPage() {
     const path = window.location.pathname;
 
-    if (path.includes('index.html')) {
+    if (path.includes('home.html')) {
         return 'index';
     } else if (path.includes('mode.html')) {
         return 'mode';
@@ -16,9 +16,9 @@ function getCurrentPage() {
 function createCurrentPage(page) {
     switch (page) {
         case 'index':
-            return new Index();
+            return new HomeComponent();
         case 'mode':
-            return new Mode();
+            return new ModeComponent();
         default:
             return undefined;
     }

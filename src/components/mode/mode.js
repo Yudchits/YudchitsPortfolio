@@ -1,10 +1,10 @@
-import ModeService from "./services/mode.service.js";
+import ModeService from "../../common/services/mode.service.js";
 
 let instance;
 
 const modeService = new ModeService();
 
-class Mode {
+class ModeComponent {
     constructor() {
         if (!instance) {
             instance = this;
@@ -23,8 +23,8 @@ class Mode {
     onModeBtnClick(event) {
         const mode = event.target.getAttribute('data-mode');
         modeService.populateMode(mode);
-        window.location.href = 'index.html';
+        window.location.href = '../home/home.html';
     }
 }
 
-export default Mode;
+export default ModeComponent;

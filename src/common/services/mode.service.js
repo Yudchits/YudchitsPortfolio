@@ -25,7 +25,7 @@ class ModeService {
     initMode() {
         const mode = cookieService.getCookie('mode');
         if (!mode) {
-            window.location.href = 'mode.html';
+            window.location.href = '../../components/mode/mode.html';
         }
         else {
             setMode(mode);

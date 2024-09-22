@@ -1,9 +1,9 @@
-import ModeService from "./services/mode.service.js";
+import ModeService from "../../common/services/mode.service.js";
 
 let instance;
 const modeService = new ModeService();
 
-class Index {
+class HomeComponent {
     constructor() {
         if (!instance) {
             instance = this;
@@ -19,4 +19,4 @@ class Index {
     }
 }
 
-export default Index;
+export default HomeComponent;
