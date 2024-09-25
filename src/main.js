@@ -1,6 +1,5 @@
 import HomeComponent from "./components/home/home.js";
 import ModeComponent from "./components/mode/mode.js";
-import NavbarComponent from "./components/navbar/navbar.js";
 
 function getCurrentPage() {
     const path = window.location.pathname;
@@ -9,8 +8,6 @@ function getCurrentPage() {
         return 'index';
     } else if (path.includes('mode.html')) {
         return 'mode';
-    } else if (path.includes('navbar.html')) {
-        return 'navbar';
     }
 
     return undefined;
@@ -22,8 +19,6 @@ function createCurrentPage(page) {
             return new HomeComponent();
         case 'mode':
             return new ModeComponent();
-        case 'navbar':
-            return new NavbarComponent();
         default:
             return undefined;
     }
