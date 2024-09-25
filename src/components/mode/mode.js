@@ -1,16 +1,16 @@
 import ModeService from "../../common/services/mode.service.js";
+import Component from "../component.js";
 
 let instance;
 
 const modeService = new ModeService();
 
-class ModeComponent {
+class ModeComponent extends Component {
     constructor() {
+        super();
         if (!instance) {
             instance = this;
         }
-
-        this.onInit();
 
         return instance;
     }

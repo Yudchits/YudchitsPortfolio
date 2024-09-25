@@ -19,7 +19,7 @@ class NavbarPartial {
     }
 
     onBrandClick() {
-        console.log('on brand click');
+        window.location.href = '../../components/home/home.html';
     }
 }
 

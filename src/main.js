@@ -31,5 +31,6 @@ function createCurrentPage(page) {
 
 const currentPage = getCurrentPage();
 if (currentPage) {
-    createCurrentPage(currentPage);
+    const component = createCurrentPage(currentPage);
+    component.onInit();
 }
