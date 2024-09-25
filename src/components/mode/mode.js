@@ -16,7 +16,7 @@ class ModeComponent {
     }
 
     onInit() {
-        const modeBtn = document.querySelectorAll('.mode-btn');
+        const modeBtn = document.querySelectorAll('.btn');
         modeBtn.forEach(btn => btn.addEventListener('click', this.onModeBtnClick));
     }
 
