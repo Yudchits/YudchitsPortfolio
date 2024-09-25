@@ -1,0 +1,16 @@
+@import url('../../style.css');
+
+.wrapper {
+    min-height: 100%;
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+}
+
+.container {
+    height: 100%;
+}
+
+header {
+    position: relative;
+    z-index: 1;
+}

@@ -30,7 +30,7 @@ class HomeComponent {
     }
 
     startFadeAnimation(selector) {
-        navbarLoaderService.insertWithin(selector).then(async () => {
+        navbarLoaderService.insertWithin(selector).then(() => {
             const isFadeAnimationNeeded = document.querySelector('._fade-animation');
             if (isFadeAnimationNeeded) {
                 fadeService.animate();
@@ -39,7 +39,7 @@ class HomeComponent {
     }
 
     onAboutMeBtnClick() {
-        //document.location.href = '../about-me/about-me.html';
+        document.location.href = '../about-me/about-me.html';
     }
 }
 

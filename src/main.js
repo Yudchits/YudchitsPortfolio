@@ -1,3 +1,4 @@
+import AboutMeComponent from "./components/about-me/about-me.js";
 import HomeComponent from "./components/home/home.js";
 import ModeComponent from "./components/mode/mode.js";
 
@@ -8,6 +9,8 @@ function getCurrentPage() {
         return 'index';
     } else if (path.includes('mode.html')) {
         return 'mode';
+    } else if (path.includes('about-me.html')) {
+        return 'about-me';
     }
 
     return undefined;
@@ -19,6 +22,8 @@ function createCurrentPage(page) {
             return new HomeComponent();
         case 'mode':
             return new ModeComponent();
+        case 'about-me':
+            return new AboutMeComponent();
         default:
             return undefined;
     }
