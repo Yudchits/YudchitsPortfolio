@@ -16,13 +16,13 @@
     height: 100%;
     width: 50%;
     float: right;
-    background-color: var(--clr-light);
+    background-color: var(--clr-dark);
 }
 
 .mode__dark {
     height: 100%;
     width: 50%;
-    background-color: var(--clr-dark);
+    background-color: var(--clr-light);
 }
 
 .center {
@@ -32,42 +32,42 @@
     align-items: center;
 }
 
-.mode-dark-btn {
+.mode-light-btn {
     color: var(--clr-light);
 }
 
-.mode-dark-btn:hover {
+.mode-light-btn:hover {
     background-color: var(--clr-light);
     color: var(--clr-dark);
     box-shadow: 0 0 50px var(--clr-light);
 }
 
-.mode-dark-btn::before {
+.mode-light-btn::before {
     border-top: 2px solid var(--clr-light);
     border-left: 2px solid var(--clr-light);
 }
 
-.mode-dark-btn::after {
+.mode-light-btn::after {
     border-bottom: 2px solid var(--clr-light);
     border-right: 2px solid var(--clr-light);
 }
 
-.mode-light-btn {
+.mode-dark-btn {
     color: var(--clr-dark);
 }
 
-.mode-light-btn:hover {
+.mode-dark-btn:hover {
     background-color: var(--clr-dark);
     color: var(--clr-light);
     box-shadow: 0 0 50px var(--clr-dark);
 }
 
-.mode-light-btn::before {
+.mode-dark-btn::before {
     border-top: 2px solid var(--clr-dark);
     border-left: 2px solid var(--clr-dark);
 }
 
-.mode-light-btn::after {
+.mode-dark-btn::after {
     border-bottom: 2px solid var(--clr-dark);
     border-right: 2px solid var(--clr-dark);
 }
