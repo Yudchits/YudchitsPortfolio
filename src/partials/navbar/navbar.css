@@ -102,7 +102,7 @@
 
 .navbar-collapse__list {
     position: fixed;
-    top: 33%;
+    top: 42%;
     left: 150%;
     transform: translate(-50%, -50%);
     transition: 1s ease-in-out;
@@ -159,27 +159,39 @@
     cursor: pointer;
 }
 
+@media (min-height: 620px) {
+    .navbar-collapse__list {
+        top: 39%;
+    }
+}
+
+@media (min-height: 690px) {
+    .navbar-collapse__list {
+        top: 35%;
+    }
+}
+
 @media (min-height: 760px) {
     .navbar-collapse__list {
-        top: 30%;
+        top: 31%;
     }
 }
 
 @media (min-height: 860px) {
     .navbar-collapse__list {
-        top: 27%;
+        top: 28%;
     }
 }
 
 @media (min-height: 960px) {
     .navbar-collapse__list {
-        top: 23%;
+        top: 25%;
     }
 }
 
 @media (min-height: 1060px) {
     .navbar-collapse__list {
-        top: 21%;
+        top: 23%;
     }
 }
 
