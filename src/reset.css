@@ -15,6 +15,15 @@
     --clr-light: #110f1b;
 }
 
+._fade-animation {
+    opacity: 0;
+    transition: opacity 3s ease-in;
+}
+
+._faded {
+    opacity: 1;
+}
+
 *,
 *::before,
 *::after {
