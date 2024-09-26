@@ -1,6 +1,6 @@
 class Component {
     onInit() {
-        throw new Error('The method is not implemented');
+        throw new Error('The method is not overrided');
     }
 }
 

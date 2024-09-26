@@ -1,7 +1,7 @@
 @import url('../../style.css');
 
 .wrapper {
-    min-height: 100%;
+    height: 100%;
     background-color: var(--clr-light);
     color: var(--clr-dark);
     position: relative;
@@ -9,17 +9,16 @@
 
 .container {
     height: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 header {
-    position: relative;
+    position: fixed;
+    width: 100%;
     z-index: 1;
 }
 
 main {
-    flex-grow: 1;
+    height: 100%;
 }
 
 .welcome {
@@ -28,6 +27,11 @@ main {
 
 .welcome__container {
     padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .welcome__image {
@@ -44,24 +48,21 @@ main {
     margin-top: 10px;
 }
 
-.welcome-image-caption__rows {
+.welcome-image-caption__items {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
 
-.welcome-image-caption__row {
+.welcome-image-caption__item {
     text-transform: uppercase;
     text-wrap: nowrap;
+    line-height: 1.5;
 }
 
-.top-caption {
-    font-size: 1.9em;
+.welcome-image-caption-item__title {
+    font-size: 1.7em;
     font-weight: 700;
-}
-
-.welcome-image-caption__buttons {
-    margin-top: 1.6em;
 }
 
 .btn::before {
@@ -81,54 +82,45 @@ main {
 }
 
 @media (min-width: 480px) {
-
     .welcome-image-image {
         width: 400px;
     }
 
-    .welcome-image-caption__row {
+    .welcome-image-caption__item {
         font-size: 1.2em;
     }
 
-    .top-caption {
-        font-size: 2.4em;
-    }
-
-    .welcome-image-caption__buttons {
-        margin-top: 1.8em;
+    .welcome-image-caption-item__title {
+        font-size: 1.9em;
     }
 
     .btn {
-        font-size: 1.7em !important;
+        font-size: 1.2em !important;
     }
 }
 
 @media (min-width: 760px) {
     .welcome-image-image {
-        width: 300px;
+        width: 410px;
     }
 
-    .welcome-image-caption__row {
-        font-size: 1.5em;
+    .welcome-image-caption__item {
+        font-size: 1.7em;
     }
 
-    .top-caption {
-        font-size: 2.6em;
-    }
-
-    .welcome-image-caption__buttons {
-        margin-top: 1.6em;
+    .welcome-image-caption-item__title {
+        font-size: 2.1em;
     }
 
     .btn {
-        font-size: 1.9em !important;
+        font-size: 1.2em !important;
     }
 }
 
 @media (min-width: 920px) {
 
     .welcome__body {
-        margin-top: 2em;
+        margin-top: 0;
     }
 
     .welcome__image {
@@ -145,6 +137,7 @@ main {
 }
 
 @media (min-width: 1200px) {
+
     .welcome-image-image {
         width: 450px;
     }
