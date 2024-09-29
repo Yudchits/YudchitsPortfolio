@@ -24,13 +24,14 @@ class FadeService {
             const scrollY = window.scrollY;
             const windowHeight = window.innerHeight;
     
-            if (distanceFromTop >= scrollY && distanceFromTop < (windowHeight + scrollY)) {
+            if (distanceFromTop >= scrollY && 
+                (distanceFromTop < (windowHeight + scrollY) 
+                    || ((distanceFromTop + fadeItem.innerHeight) < (windowHeight + scrollY)))) {
                 fadeItem.classList.add('_faded');
                 await new Promise(resolve => setTimeout(resolve, delay));
             }
         }
     }    
-    
 }
 
 export default FadeService;
