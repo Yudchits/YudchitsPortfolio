@@ -1,16 +1,65 @@
 @import url('../../style.css');
 
+:root {
+    --row-gap: 10px;
+}
+
 .wrapper {
-    min-height: 100%;
+    min-height: 100vh;
     background-color: var(--clr-light);
     color: var(--clr-dark);
 }
 
-.container {
-    height: 100%;
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
 }
 
-header {
-    position: relative;
-    z-index: 1;
+.about-me__container {
+    padding: 15px;
+}
+
+.about-me-desc__items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--row-gap);
+}
+
+.about-me-desc__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--row-gap);
+}
+
+.about-me-desc-item__text {
+    text-transform: uppercase;
+    text-indent: 10px;
+    text-shadow: 1px 1px 1px var(--clr-light);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.about-me-desc-item-image__image {
+    border-radius: 50%;
+    min-width: 150px;
+}
+
+@media (min-width: 480px) {
+    .about-me-desc-item__text {
+        font-size: 1.2em;
+    }
+
+    .about-me-desc-item-image__image {
+        width: 180px;
+    }
+}
+
+@media (min-width: 920px) {
+    .about-me-desc__item {
+        flex-direction: row;
+    }
 }
