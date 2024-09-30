@@ -62,4 +62,9 @@ header {
     .about-me-desc__item {
         flex-direction: row;
     }
+
+    .about-me-desc-image-2 {
+        order: -1;
+    }
+
 }
