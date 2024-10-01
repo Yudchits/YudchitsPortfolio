@@ -1,0 +1,104 @@
+@import url('../../style.css');
+
+:root {
+    --x-padding: 15px;
+}
+
+.wrapper {
+    min-height: 100vh;
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.experience {
+    margin-top: 1.2em;
+}
+
+.experience__container {
+    padding: 0 var(--x-padding) var(--x-padding);
+}
+
+.experience__body {
+    text-transform: uppercase;
+}
+
+.job-table__container {
+}
+
+.job-table__body {
+    margin-top: 3px;
+}
+
+.job-table__header,
+.projects-table__header {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.job-table__table,
+.projects-table__table {
+    width: 100%;
+    text-align: center;
+}
+
+.job-table__table, 
+.job-table__table th, 
+.job-table__table td,
+.projects-table__table,
+.projects-table__table th,
+.projects-table__table td {
+    border: 2px solid var(--clr-dark);
+    border-collapse: collapse;
+    padding: 15px;
+}
+
+.projects {
+    margin-top: 2.1em;
+}
+
+.projects-table__body {
+    margin-top: 3px;
+}
+
+@media (min-width: 768px) {
+    .job-table__header,
+    .projects-table__header {
+        font-size: 1.3em;
+    }
+
+    .job-table__table th,
+    .job-table__table td,
+    .projects__table th,
+    .projects__table td {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 992px) {
+    .projects {
+        margin-top: 2.3em;
+    }
+    
+    .job-table__container,
+    .project-table__container {
+        width: 85%;
+        margin: 0 auto;
+    }
+}

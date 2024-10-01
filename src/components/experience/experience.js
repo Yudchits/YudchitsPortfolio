@@ -1,5 +1,5 @@
-import ModeService from "../../common/services/mode.service.js";
 import FadeService from "../../common/services/fade.service.js";
+import ModeService from "../../common/services/mode.service.js";
 import NavbarLoaderService from "../../common/services/navbar-loader.service.js";
 import Component from "../component.js";
 
@@ -7,7 +7,8 @@ const modeService = new ModeService();
 const navbarLoaderService = new NavbarLoaderService();
 const fadeService = new FadeService();
 
-class AboutMeComponent extends Component {
+class ExperienceComponent extends Component {
+
     constructor() {
         super();
     }
@@ -26,4 +27,4 @@ class AboutMeComponent extends Component {
     }
 }
 
-export default AboutMeComponent;
+export default ExperienceComponent;

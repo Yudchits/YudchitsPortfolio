@@ -63,8 +63,7 @@ header {
         flex-direction: row;
     }
 
-    .about-me-desc-image-2 {
+    .about-me-desc-image-1 {
         order: -1;
     }
-
 }

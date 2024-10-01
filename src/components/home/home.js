@@ -3,8 +3,6 @@ import ModeService from "../../common/services/mode.service.js";
 import NavbarLoaderService from "../../common/services/navbar-loader.service.js";
 import Component from "../component.js";
 
-let instance;
-
 const modeService = new ModeService();
 const fadeService = new FadeService();
 const navbarLoaderService = new NavbarLoaderService();
@@ -12,30 +10,24 @@ const navbarLoaderService = new NavbarLoaderService();
 class HomeComponent extends Component {
     constructor() {
         super();
-        if (!instance) {
-            instance = this;
-        }
-
-        return instance;
     }
 
-    onInit() {
+    async onInit() {
         modeService.initMode();
-        this.startFadeAnimation('header');
-        
+        await navbarLoaderService.insertWithin('header');
+        this.startFadeAnimation();
+
         const aboutMeBtn = document.querySelector('.about-me-btn');
         if (aboutMeBtn) {
             aboutMeBtn.addEventListener('click', this.onAboutMeBtnClick)
         }
     }
 
-    startFadeAnimation(selector) {
-        navbarLoaderService.insertWithin(selector).then(() => {
-            const isFadeAnimationNeeded = document.querySelector('._fade-animation');
-            if (isFadeAnimationNeeded) {
-                fadeService.animate();
-            }
-        });
+    startFadeAnimation() {
+        const isFadeAnimationNeeded = document.querySelector('._fade-animation');
+        if (isFadeAnimationNeeded) {
+            fadeService.animate();
+        }
     }
 
     onAboutMeBtnClick() {

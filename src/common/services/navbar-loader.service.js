@@ -11,26 +11,24 @@ class NavbarLoaderService {
         return instance;
     }
 
-    insertWithin(selector) {
-        return fetch('../../partials/navbar/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.querySelector(selector).insertAdjacentHTML('afterbegin', data);
-                
-                const link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.href = '../../partials/navbar/navbar.css';
-                document.head.appendChild(link);
-                
-                return new Promise((resolve) => {
-                    link.onload = resolve;
-                    link.onerror = () => console.error('Error loading CSS');
-                });
-            })
-            .then(() => {
-                new NavbarPartial();
-            })
-            .catch(error => console.error('Error loading navbar:', error));
+    async insertWithin(selector) {
+        try {
+            const response = await fetch('../../partials/navbar/navbar.html');
+            const data = await response.text();
+            document.querySelector(selector).insertAdjacentHTML('afterbegin', data);
+
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = '../../partials/navbar/navbar.css';
+            document.head.appendChild(link);
+            await new Promise((resolve) => {
+                link.onload = resolve;
+                link.onerror = () => console.error('Error loading CSS');
+            });
+            new NavbarPartial().onInit();
+        } catch (error) {
+            return console.error('Error loading navbar:', error);
+        }
     }
     
 }

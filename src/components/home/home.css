@@ -40,7 +40,7 @@ main {
 }
 
 .welcome-image-image {
-    width: 300px;
+    width: 230px;
     border-radius: 50%;
 }
 
@@ -83,7 +83,7 @@ main {
 
 @media (min-width: 480px) {
     .welcome-image-image {
-        width: 400px;
+        width: 260px;
     }
 
     .welcome-image-caption__item {
@@ -101,7 +101,7 @@ main {
 
 @media (min-width: 760px) {
     .welcome-image-image {
-        width: 410px;
+        width: 350px;
     }
 
     .welcome-image-caption__item {
@@ -139,6 +139,6 @@ main {
 @media (min-width: 1200px) {
 
     .welcome-image-image {
-        width: 450px;
+        width: 340px;
     }
 }

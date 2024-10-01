@@ -1,15 +1,5 @@
-let instance;
-
 class NavbarPartial {
-    constructor() {
-        if (!instance) {
-            instance = this;
-        }
-
-        this.onInit();
-
-        return instance;
-    }
+    constructor() {}
 
     onInit() {
         const brand = document.querySelector('.navbar-collapse-brand');
