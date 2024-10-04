@@ -16,6 +16,7 @@ class AboutMeComponent extends Component {
         modeService.initMode();
         await navbarLoaderService.insertWithin('header');
         this.startFadeAnimation();
+        this.addEventListeners();
     }
 
     startFadeAnimation() {
@@ -23,6 +24,19 @@ class AboutMeComponent extends Component {
         if (isFadeAnimationNeeded) {
             fadeService.animate();
         }
+    }
+
+    addEventListeners() {
+        const contactMeBtn = document.querySelector('.contact-me-btn');
+        if (contactMeBtn) {
+            contactMeBtn.addEventListener('click', this.onContactMeBtnClick);
+        }
+    }
+
+    onContactMeBtnClick() {
+        setTimeout(() => {
+            //document.location.href = '../contact/contact.html';
+        }, 510);
     }
 }
 

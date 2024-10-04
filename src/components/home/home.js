@@ -16,11 +16,7 @@ class HomeComponent extends Component {
         modeService.initMode();
         await navbarLoaderService.insertWithin('header');
         this.startFadeAnimation();
-
-        const aboutMeBtn = document.querySelector('.about-me-btn');
-        if (aboutMeBtn) {
-            aboutMeBtn.addEventListener('click', this.onAboutMeBtnClick)
-        }
+        this.addEventListeners();
     }
 
     startFadeAnimation() {
@@ -30,8 +26,17 @@ class HomeComponent extends Component {
         }
     }
 
+    addEventListeners() {
+        const aboutMeBtn = document.querySelector('.about-me-btn');
+        if (aboutMeBtn) {
+            aboutMeBtn.addEventListener('click', this.onAboutMeBtnClick)
+        }
+    }
+
     onAboutMeBtnClick() {
-        document.location.href = '../about-me/about-me.html';
+        setTimeout(() => {
+            document.location.href = '../about-me/about-me.html';
+        }, 510);
     }
 }
 

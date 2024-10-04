@@ -140,10 +140,12 @@ b {
     font-weight: 700;
     letter-spacing: 0.7px;
     transition: 0.5s;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0000004a);
 }
 
 .btn:hover {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    box-shadow: 0 0 50px var(--clr-dark);
     transition-delay: 0.3s;
 }
 
@@ -156,6 +158,8 @@ b {
     height: 10px;
     transition: 0.5s;
     transition-delay: 0.3s;
+    border-top: 2px solid var(--clr-dark);
+    border-left: 2px solid var(--clr-dark);
 }
 
 .btn:hover::before {
@@ -173,6 +177,8 @@ b {
     height: 10px;
     transition: 0.5s;
     transition-delay: 0.3s;
+    border-bottom: 2px solid var(--clr-dark);
+    border-right: 2px solid var(--clr-dark);
 }
 
 .btn:hover::after {

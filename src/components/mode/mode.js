@@ -14,9 +14,11 @@ class ModeComponent extends Component {
     }
 
     onModeBtnClick(event) {
-        const mode = event.target.getAttribute('data-mode');
-        modeService.populateMode(mode);
-        window.location.href = '../home/home.html';
+        setTimeout(() => {
+            const mode = event.target.getAttribute('data-mode');
+            modeService.populateMode(mode);
+            window.location.href = '../home/home.html';
+        }, 510);
     }
 }
 
