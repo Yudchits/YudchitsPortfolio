@@ -1,0 +1,102 @@
+@import url('../../style.css');
+
+:root {
+    --row-padding: 15px;
+}
+
+.wrapper {
+    min-height: 100vh;
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.main__container {
+    padding: var(--row-padding);
+}
+
+.contact {
+    margin-top: 30px;
+}
+
+.contact__container {
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px var(--clr-light);
+}
+
+.contact__header {
+    font-weight: 600;
+    text-align: center;
+}
+
+.contact-header__items {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.contact-header__item {
+    font-size: 1.1em;
+}
+
+.contact__body {
+    margin-top: 15px;
+}
+
+.contact-body__image {
+    text-align: center;
+}
+
+.contact-body-image__image {
+    border-radius: 50%;
+}
+
+.contact-body__buttons {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    font-size: 1.1em !important;
+}
+
+.contact-body__icons {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.dark-mode .github-image {
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(2deg) brightness(112%) contrast(101%);
+}
+
+@media (min-width: 768px) {
+    .contact-header__item {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        font-size: 1.2em !important;
+    }
+}

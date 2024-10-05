@@ -35,7 +35,7 @@ class AboutMeComponent extends Component {
 
     onContactMeBtnClick() {
         setTimeout(() => {
-            //document.location.href = '../contact/contact.html';
+            document.location.href = '../contact/contact.html';
         }, 510);
     }
 }
