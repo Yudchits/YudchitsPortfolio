@@ -35,7 +35,7 @@ function createCurrentPage(page) {
         case 'contact':
             return new ContactComponent();
         default:
-            return undefined;
+            throw new Error('Cannot create component');
     }
 }
 
